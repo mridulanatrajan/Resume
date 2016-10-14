@@ -1,0 +1,205 @@
+% arara: xelatex
+% arara: make: { task: "cv.png" }
+\documentclass{simplecv}
+\usepackage{lmodern}
+\BetterSetup{
+  textout = \jobname.cv.txt,
+  textout-preamble = preamble.txt,
+}
+%\CensorInformation
+
+\usepackage{additional-setup}
+\usepackage{ragged2e}
+
+\ContactInformation{
+    name   = Mridula Natrajan,
+    email  = mrna6782@colorado.edu,
+    github = https://github.com/mridulanatrajan,
+    phone  = 973\,342\,8054,
+    street = 2754 Moorhead Avenue Apt 103,
+    city   = Boulder,	,
+    state  = Colorado,
+    zip    = 80305,
+}
+
+\newif\ifmath
+\newif\ifgithub
+\newif\ifinterests
+
+\IfCensoredTF{}{\IfFileExists{./contact-info.tex}{\input{contact-info}}{}}
+
+\mathtrue
+\githubtrue
+\intereststrue
+\begin{document}
+\maketitle
+
+\section{Education} 
+\begin{education}
+  {
+      major = \textbf{Computer Science},
+      degree = Master of Science,
+      school = CU Boulder,
+      school-link = http://www.colorado.edu/cs/,
+      state = CO,
+      city = Boulder,
+      date = 2016 - \textit{expected} 2018,
+  }
+
+\begin{description}
+     \item[Current Coursework]
+       \course{Natural Language Processing},
+       \course{Linear Programming}
+      \item[Planned coursework]
+        \course{Machine Learning},
+        \course{Theory of Computation},
+        \course{Advanced Robotics}
+      \item[Datascience Team] Part of the Datascience team that works towards machine learning and natural language processing exercises.
+\end{description}
+\end{education}
+\begin{education}
+  {
+      major = \textbf{Information Technology},
+      degree = Bachelor of Technology,
+      school = VIT University,
+      school-link = http://www.vit.ac.in/,
+      state = India,
+      city = Vellore,
+      date = 2010 - 2014,
+  }
+\begin{description}
+    \item[Relevant Coursework]
+      \course{Data structure and Algorithm},
+      \course{Artificial Intelligence},
+      \course{Linear Algebra},
+      \course{Numerical Analysis}
+    \item[Cisco Centre of Engineering Excellence] Selected to be a part of CCoEE. Researched on various networking protocols and implemented them on networking devices.
+    \item[CGPA] 8.95/10
+\end{description}
+\end{education}
+  \section{Work Experience}
+
+\begin{position}
+  {
+      title   = \textbf{Technical Services Engineer},
+      company = Cisco Systems,
+      state= India,
+      city= Bangalore,
+      date    = July 2014- May 2016,
+  }
+
+  \begin{itemize}
+      \item  Worked on application layer technologies such as ACE,WAVE and UCS-E. 
+      \item  Troubleshot issues in live networks and restored them to production.
+      \item  Led an initiative to teach the basics of CCNA to differently abled employees of Cisco
+      \item  Worked as a part of the CSR team to help raise funds for underprivildged children suffering from cancer.
+\end{itemize}
+\end{position}
+\vfill
+\begin{position}
+  {
+      title   = \textbf{Technical Services Intern},
+      company = Cisco Systems,
+      city= Bangalore,
+      date    = Jan 2014-July 2014,
+  }
+
+\begin{itemize}
+    \item Worked in Technical Services Lab in order to build Network topologies and replicate issues in customer network
+    \item shadowed engineers from various technical departments such as routing, switching, wireless and security.   
+ \end{itemize}
+\end{position}
+
+\section{Technical Summary}
+\begin{minipage}{\textwidth}
+\begin{description}
+
+
+
+ \item[Languages]
+    Python,
+    C,
+    Java,
+    \CPP,
+    \TeX 
+\item[Web  Designing]
+    HTML,
+    CSS,
+    Javascript,
+    PHP
+  
+\item[Software] 
+    MATLAB,
+    Wireshark,
+    foma
+     
+\item [Operating  Systems \& Middleware]
+     Linux (Ubuntu)
+     
+\item[Protocols]
+    TCP/IP,
+    HTTP
+  
+\item[Certifications]
+	CCNA Routing  \& Switching,
+	CCNP Routing \& Switching
+      
+\end{description}
+\end{minipage}
+\section{Projects}
+
+
+\begin{position}
+     {
+      title   = \textbf{Traffic Disector},
+      company = Cisco Systems,
+      date = Jan 2014 - July 2014,
+      }
+      \begin{itemize}    
+	      \item Created an application that discovers and displays a network topology.	      
+        \item Contained features to display the interface and protocol wise statistics.
+        \item Used Cisco's OnePK SDK for SDN in order to accomplish this.
+        \item Primary Language used was C
+	     \end{itemize}
+ \end{position}
+ \vfill                                                                      
+ \begin{position}
+   {
+    title   = \textbf{Shortest Path Grid },
+    company = VIT, 
+    date    =  Jan 2013 - May 2014,
+   }
+	 \begin{itemize}
+        \item  Deployed Dijkstra's Algorithm in a grid system of four computers.
+        \item  Used Java language to implement the same.
+    \end{itemize}
+	\end{position}
+\vfill
+   \begin{position}
+   {
+    title   = \textbf{Cardoholic},
+    company = VIT, 
+    date    =  Jan 2013 - May 2013,
+   }
+	 \begin{itemize}
+        \item  Created a website that allowed it's users to customize and design greeting cards.
+        \item  Developed a customization page using Adobe Flash Professional CS5 and ActionScript3.
+        \item  Devloped front-end using HTML, CSS and Flash and back-end using Javascript, PHP.
+    \end{itemize}
+	\end{position}
+
+ 
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% TeX-PDF-mode: t
+%%% TeX-command-default: "arara"
+%%% TeX-engine: xetex
+%%% End:
+
+%  LocalWords:  gpa adraig Jamieson Mathematica Powerpoint OneNote
+%  LocalWords:  JSON cli YASCA Camtasia tri PDF PostgreSQL Visio CTAN
+%  LocalWords:  Visio Redmine company-link title-link StackExchange
+%  LocalWords:  StackMode ghkey vermiculus
